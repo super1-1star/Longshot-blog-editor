@@ -1,27 +1,22 @@
 import "./App.css";
 import EditorMain from "./components/inputField";
+import Performance from "./components/performace";
+import AddOns from "./components/addOns";
+import KeywordsToUse from "./components/keywordsToUse";
 
 function App() {
   return (
     <main>
       <div className='container'>
-        <div className='left-col blue'>
-          <div className='tool-box blue'>
-
-          </div>
-          <div className='input-editor '>
-          <EditorMain/>
-          </div>
+        <div className='left-col '>
+          <EditorMain />
         </div>
         <div className='right-col'>
-          <div className='performance-container red'></div>
-          <div className='add-ons-container yellow'></div>
-          <div className='keywords-to-use-container blue'></div>
+          <Performance />
+          <AddOns />
+          <KeywordsToUse />
         </div>
       </div>
-
-    
-    
     </main>
   );
 }

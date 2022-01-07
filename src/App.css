@@ -1,6 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: grid;
-  grid-template-columns: 90% auto;
+  grid-template-columns: 75% auto;
 }
 
 .blue {
@@ -31,7 +36,7 @@
 RichEditor-root {
   background: #fff;
   border: 1px solid #ddd;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 14px;
   padding: 15px;
 }
@@ -60,7 +65,7 @@ RichEditor-root {
 .RichEditor-editor .RichEditor-blockquote {
   border-left: 5px solid #eee;
   color: #666;
-  font-family: 'Hoefler Text', 'Georgia', serif;
+  font-family: "Hoefler Text", "Georgia", serif;
   font-style: italic;
   margin: 16px 0;
   padding: 10px 20px;
@@ -68,13 +73,13 @@ RichEditor-root {
 
 .RichEditor-editor .public-DraftStyleDefault-pre {
   background-color: rgba(0, 0, 0, 0.05);
-  font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
   font-size: 16px;
   padding: 20px;
 }
 
 .RichEditor-controls {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 14px;
   margin-bottom: 5px;
   user-select: none;
@@ -91,4 +96,67 @@ RichEditor-root {
 .RichEditor-activeButton {
   color: #5890ff;
 }
+
+/* --------------------------------------------------- */
+
+/* left col */
+
+.left-col{
+  border: 0.1rem solid rgb(243, 238, 238);
+}
+
+.heading{
+  margin: 0 0 2% 10% ;
+}
+
+.heading h1 {
+  color: #27add1;
+  font-size: 1.7rem;
+  padding: 7% 0 5% 0;
+  
+}
+.sub-heading {
+  
+  padding:0.5% 0 1% 10%;
+  border:0.1rem solid rgb(243, 238, 238);
+}
+.sub-heading h2 {
+  color: #63808d;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.sub-heading p {
+  color: #a1a1a1;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin: 1% 0 2% 0;
+}
+
+.sub-heading-btn{
+  padding:5% 15%;
+}
+.sub-heading button{
+  background-color:#6b70ea ;
+  padding: 5% 15% ;
+  border-radius: 7px;
+  border:0;
+}
+.sub-heading button p{
+  color: #fff;
+}
+
+.keyword-btn{
+  padding:2% 5%;
+  border-radius: 30px;
+  margin: 1%;
+  background-color:#ea4863 ;
+  color: #fff;
+  border:0;
+}
+
+.keyword-btn:nth-child(3) {
+  background: #50c955;
+}
+
+
 
