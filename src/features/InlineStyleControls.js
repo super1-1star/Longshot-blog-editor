@@ -1,9 +1,9 @@
 import StyleButton from "./StyleButton";
 
 var INLINE_STYLES = [
-  { label: "Bold", style: "BOLD" },
-  { label: "Italic", style: "ITALIC" },
-  { label: "Underline", style: "UNDERLINE" },
+  { label: "B", style: "BOLD" ,exClass:"text-bold"},
+  { label: "I", style: "ITALIC",exClass:"text-italic"},
+  { label: "U", style: "UNDERLINE",exClass:"text-underline" },
 ];
 
 const InlineStyleControls = (props) => {
@@ -18,6 +18,7 @@ const InlineStyleControls = (props) => {
           label={type.label}
           onToggle={props.onToggle}
           style={type.style}
+          exClass={type.exClass}
         />
       ))}
     </>

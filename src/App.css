@@ -7,30 +7,36 @@
   display: grid;
   grid-template-columns: 75% auto;
 }
-
-.blue {
-  background-color: blue;
-  width: 100%;
-  height: 200px;
+/* -------------------------- */
+/* toolbar */
+.toolbar {
+  background-color: #f5f5f5;
+  padding: 1.5% 0 1.5% 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.red {
-  background-color: red;
-  width: 100%;
-  height: 200px;
-}
-
-.yellow {
-  background-color: yellow;
-  width: 100%;
-  height: 200px;
+.main-toolbar{
+  display: flex;
+  justify-content: left;
 }
 
-.my-little-app {
-  width: 500px;
-  margin: 50px auto;
+.extra-button-container {
+  display: flex;
+  justify-content: right;
 }
-.draft-editor-wrapper {
-  border: 1px solid #ccc;
+.extra-button {
+  background-color: #e0e0e0;
+  color: #415057;
+  border: 0;
+  border-radius: 5px;
+  padding: 2% 1%;
+  margin-right:3% ;
+}
+
+/* ------------------------------------- */
+
+.left-col {
+  height: 100%;
 }
 
 RichEditor-root {
@@ -39,13 +45,13 @@ RichEditor-root {
   font-family: "Georgia", serif;
   font-size: 14px;
   padding: 15px;
+  height: 100%;
 }
 
 .RichEditor-editor {
   border-top: 1px solid #ddd;
   cursor: text;
   font-size: 16px;
-  margin-top: 10px;
 }
 
 .RichEditor-editor .public-DraftEditorPlaceholder-root,
@@ -58,9 +64,9 @@ RichEditor-root {
   min-height: 100px;
 }
 
-.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+/* .RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
   display: none;
-}
+} */
 
 .RichEditor-editor .RichEditor-blockquote {
   border-left: 5px solid #eee;
@@ -85,40 +91,68 @@ RichEditor-root {
   user-select: none;
 }
 
-.RichEditor-styleButton {
+/* .RichEditor-styleButton {
   color: #999;
   cursor: pointer;
   margin-right: 16px;
   padding: 2px 0;
   display: inline-block;
+} */
+
+.style-btn {
+  cursor: pointer;
+  margin-right: 2.5%;
+  padding: 2px 0 0 0;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  color: #415057;
+  font-size: 1.2rem;
 }
 
-.RichEditor-activeButton {
-  color: #5890ff;
+.style-btn-active {
+  background-color: #e0e0e0;
+  border-radius: 30px;
+  padding: 0.8%;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.change-my-color {
+  fill: #415057;
+  margin: auto;
+  width: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --------------------------------------------------- */
 
-/* left col */
+/* right col */
 
-.left-col{
+.right-col {
   border: 0.1rem solid rgb(243, 238, 238);
 }
 
-.heading{
-  margin: 0 0 2% 10% ;
+.heading {
+  margin: 0 0 2% 10%;
 }
 
 .heading h1 {
   color: #27add1;
   font-size: 1.7rem;
   padding: 7% 0 5% 0;
-  
 }
 .sub-heading {
-  
-  padding:0.5% 0 1% 10%;
-  border:0.1rem solid rgb(243, 238, 238);
+  padding: 0.5% 0 1% 10%;
+  border: 0.1rem solid rgb(243, 238, 238);
 }
 .sub-heading h2 {
   color: #63808d;
@@ -132,31 +166,28 @@ RichEditor-root {
   margin: 1% 0 2% 0;
 }
 
-.sub-heading-btn{
-  padding:5% 15%;
+.sub-heading-btn {
+  padding: 5% 15%;
 }
-.sub-heading button{
-  background-color:#6b70ea ;
-  padding: 5% 15% ;
+.sub-heading button {
+  background-color: #6b70ea;
+  padding: 5% 15%;
   border-radius: 7px;
-  border:0;
+  border: 0;
 }
-.sub-heading button p{
+.sub-heading button p {
   color: #fff;
 }
 
-.keyword-btn{
-  padding:2% 5%;
+.keyword-btn {
+  padding: 2% 5%;
   border-radius: 30px;
   margin: 1%;
-  background-color:#ea4863 ;
+  background-color: #ea4863;
   color: #fff;
-  border:0;
+  border: 0;
 }
 
 .keyword-btn:nth-child(3) {
   background: #50c955;
 }
-
-
-

@@ -6,6 +6,9 @@ import BlockStyleControls from "../features/BlockStyleControls";
 import InlineStyleControls from "../features/InlineStyleControls";
 import StyleMap from "../features/StyleMap";
 import getBlockStyle from "../features/GetBlockStyle";
+import ExtraButton from "../features/ExtraButton";
+import redoImage from "../image/redoImage.svg";
+import undoImage from "../image/undoImage.svg";
 
 // const [editorState,SetEditorState] = useState()
 class EditorMain extends React.Component {
@@ -78,17 +81,36 @@ class EditorMain extends React.Component {
 
     return (
       <div className='RichEditor-root'>
-        <InlineStyleControls
-          editorState={editorState}
-          onToggle={this.toggleInlineStyle}
-        />
-        <BlockStyleControls
-          editorState={editorState}
-          onToggle={this.toggleBlockType}
-        />
-        
-        <button onClick={this.onUndo.bind(this)}>undo</button>
-        <button onClick={this.onRedo.bind(this)}>redo</button>
+        <div className='toolbar'>
+          <div className='main-toolbar'>
+            <InlineStyleControls
+              editorState={editorState}
+              onToggle={this.toggleInlineStyle}
+            />
+            <BlockStyleControls
+              editorState={editorState}
+              onToggle={this.toggleBlockType}
+            />
+
+            <button className='style-btn' onClick={this.onUndo.bind(this)}>
+              <img
+                className=' change-my-color'
+                src={undoImage}
+                alt='UL'
+                srcset=''
+              />
+            </button>
+            <button className='style-btn' onClick={this.onRedo.bind(this)}>
+              <img
+                className=' change-my-color'
+                src={redoImage}
+                alt='UL'
+                srcset=''
+              />
+            </button>
+          </div>
+          <ExtraButton />
+        </div>
         <div className={className} onClick={this.focus}>
           <Editor
             blockStyleFn={getBlockStyle}
@@ -106,7 +128,5 @@ class EditorMain extends React.Component {
     );
   }
 }
-
-
 
 export default EditorMain;

@@ -24,6 +24,7 @@ const BlockStyleControls = (props) => {
           label={type.label}
           onToggle={props.onToggle}
           style={type.style}
+          
         />
       ))}
     </>
