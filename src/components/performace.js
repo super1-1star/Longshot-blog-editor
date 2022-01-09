@@ -15,7 +15,7 @@ const Performance = ()=>{
         <div className='sub-heading'>
           <h2>Power Words</h2>
           <p>
-            {powerWords} <span>/</span>
+            {powerWords}<span>/</span>
             {totalPowerWords}
           </p>
         </div>

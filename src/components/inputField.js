@@ -1,22 +1,20 @@
 import React from "react";
-import reactDom from "react-dom";
 import { Editor, EditorState, RichUtils, getDefaultKeyBinding } from "draft-js";
 import "../App.css";
 import BlockStyleControls from "../features/BlockStyleControls";
 import InlineStyleControls from "../features/InlineStyleControls";
 import StyleMap from "../features/StyleMap";
-import getBlockStyle from "../features/GetBlockStyle";
+import GetBlockStyle from "../features/GetBlockStyle";
 import ExtraButton from "../features/ExtraButton";
 import redoImage from "../image/redoImage.svg";
 import undoImage from "../image/undoImage.svg";
 
-// const [editorState,SetEditorState] = useState()
 class EditorMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = { editorState: EditorState.createEmpty() };
 
-    this.focus = () => this.refs.editor.focus();
+    this.focus = () => this.editor.focus();
     this.onChange = (editorState) => this.setState({ editorState });
 
     this.handleKeyCommand = this._handleKeyCommand.bind(this);
@@ -96,7 +94,7 @@ class EditorMain extends React.Component {
               <img
                 className=' change-my-color'
                 src={undoImage}
-                alt='UL'
+                alt='undo'
                 srcset=''
               />
             </button>
@@ -104,23 +102,23 @@ class EditorMain extends React.Component {
               <img
                 className=' change-my-color'
                 src={redoImage}
-                alt='UL'
+                alt='redo'
                 srcset=''
               />
             </button>
           </div>
           <ExtraButton />
+         
         </div>
         <div className={className} onClick={this.focus}>
           <Editor
-            blockStyleFn={getBlockStyle}
+            blockStyleFn={GetBlockStyle}
             customStyleMap={StyleMap}
             editorState={editorState}
             handleKeyCommand={this.handleKeyCommand}
             keyBindingFn={this.mapKeyToEditorCommand}
             onChange={this.onChange}
             placeholder='Write Here'
-            ref='editor'
             spellCheck={true}
           />
         </div>

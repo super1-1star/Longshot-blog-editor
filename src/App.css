@@ -11,7 +11,7 @@
 /* toolbar */
 .toolbar {
   background-color: #f5f5f5;
-  padding: 1.5% 0 1.5% 1%;
+  padding: 1% 0 1% 1%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -29,7 +29,7 @@
   color: #415057;
   border: 0;
   border-radius: 5px;
-  padding: 2% 1%;
+  padding: 1.5% 1%;
   margin-right:3% ;
 }
 
@@ -43,21 +43,21 @@ RichEditor-root {
   background: #fff;
   border: 1px solid #ddd;
   font-family: "Georgia", serif;
-  font-size: 14px;
-  padding: 15px;
+  font-size: 1rem;
+  padding: 1%;
   height: 100%;
 }
 
 .RichEditor-editor {
   border-top: 1px solid #ddd;
   cursor: text;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .RichEditor-editor .public-DraftEditorPlaceholder-root,
 .RichEditor-editor .public-DraftEditor-content {
-  margin: 0 -15px -15px;
-  padding: 15px;
+  margin: 0 -1% -1%;
+  padding: 1%;
 }
 
 .RichEditor-editor .public-DraftEditor-content {
@@ -86,8 +86,8 @@ RichEditor-root {
 
 .RichEditor-controls {
   font-family: "Helvetica", sans-serif;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 0;
   user-select: none;
 }
 
@@ -147,7 +147,7 @@ RichEditor-root {
 
 .heading h1 {
   color: #27add1;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   padding: 7% 0 5% 0;
 }
 .sub-heading {

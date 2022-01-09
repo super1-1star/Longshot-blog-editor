@@ -1,15 +1,21 @@
 
-import createCounterPlugin from '@draft-js-plugins/counter';
-import { EditorState } from 'draft-js';
-import React from 'react';
 
-const counterPlugin = createCounterPlugin();
-const { CharCounter } = counterPlugin;
+ const WordCounter = (editorState) => {
+   const plainText = editorState.getCurrentContent().getPlainText("");
+   const regex = /(?:\r\n|\r|\n)/g; // new line, carriage return, line feed
+   const cleanString = plainText.replace(regex, " ").trim(); // replace above characters w/ space
+   const wordArray = cleanString.match(/\S+/g); // matches words according to whitespace
+
+   return wordArray ? wordArray.length : 0;
+ };
 
 
-const WordCounter = (props)=>{
+// const WordCounter =(editorState)=>{
+//     const wordCount = getWordCount(editorState);
+//       return(
+//           <h1>wordCount</h1>
+//       )
+//   }
 
 
-}
-
-export default CharCounter;
+export default WordCounter;
