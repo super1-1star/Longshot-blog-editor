@@ -24,6 +24,17 @@ A blog editor build using React.js and CSS.
 - CSS
 
 
+<!-- Blog-editor using react.js
+Edit
+Edit
+
+01. Build a blog editor using drafts.js and drafts-js-plugins.
+
+02. The editor have these options: B, I, U, H1, H2, bullet points, redo, undo.
+
+03. Working on it for other function like word count and other -->
+
+
 ## Demo
 
 The Application is deployed in https://blog-editor.netlify.app/
